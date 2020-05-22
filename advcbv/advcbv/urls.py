@@ -19,7 +19,7 @@ from basic_app import views
 from django.conf.urls import url,include
 
 urlpatterns = [
-    url(r'^$',views.IndexView.as_view()),
+    url(r'^$',views.IndexView.as_view(),name='index'),
     url(r'^basic_app/',include('basic_app.urls',namespace='basic_app')),
     path('admin/', admin.site.urls),
 ]
